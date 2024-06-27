@@ -5,6 +5,7 @@ import { Pacifico } from 'next/font/google';
 
 const inter = Pacifico({ weight: ['400'], subsets: ['latin'] });
 
+
 export default function () {
     function handleLearnMore() {
         console.log('Please implement the "Learn more" functionality');

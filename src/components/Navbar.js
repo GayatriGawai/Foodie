@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
-import HomeIcon from '@/icons/Home';
-import SearchIcon from '@/icons/Search';
+import Home from '../icons/Home'
+import Search from '../icons/Search';
 
 import { Pacifico } from 'next/font/google';
-import OffersIcon from '@/icons/OffersIcon';
-import HelpIcon from '@/icons/Help';
-import ShoppingCart from '@/icons/ShoppingCart';
+import Offers from '../icons/OffersIcon';
+import Help from '../icons/Help';
+import ShoppingCart from '../icons/ShoppingCart';
 
 const inter = Pacifico({ weight: ['400'], subsets: ['latin'] });
 export default function NavBar() {
@@ -40,26 +40,26 @@ export default function NavBar() {
                             href={'/'}
                             className="hover:text-primary flex items-center"
                         >
-                            <HomeIcon /> Home
+                            <Home /> Home
                         </Link>
 
                         <Link
                             href="/"
                             className="hover:text-primary flex items-center"
                         >
-                            <SearchIcon /> Search
+                            <Search /> Search
                         </Link>
                         <Link
                             className="hover:text-primary flex items-center"
                             href={'/offers'}
                         >
-                            <OffersIcon /> Offers
+                            <Offers /> Offers
                         </Link>
                         <Link
                             className="hover:text-primary flex items-center"
                             href={'/help'}
                         >
-                            <HelpIcon /> Help
+                            <Help /> Help
                         </Link>
                         <Link
                             className="hover:text-primary flex items-center"
