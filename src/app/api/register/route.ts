@@ -1,4 +1,3 @@
-import { connectDB } from '../../../libs/mongoConnect'
 import { NextResponse } from "next/server";
 import {User} from '../../../model/User'
 import jwt from "jsonwebtoken";
@@ -7,7 +6,6 @@ import bcrypt from "bcrypt";
 
 export async function POST(req:Request) {
   try {
-    connectDB();
   const body = await req.json();
 
   const { email, password } = body;

@@ -1,6 +1,6 @@
 'use client';
 import { Fragment } from 'react';
-import Right from '@/icons/Right';
+import Right from '../icons/Right';
 import { Pacifico } from 'next/font/google';
 
 const inter = Pacifico({ weight: ['400'], subsets: ['latin'] });

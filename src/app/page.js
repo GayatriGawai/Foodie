@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import Home from '@/components/Home';
-import MainMenu from '@/components/MainMenu';
+import Home from '../components/Home';
+import MainMenu from '../components/MainMenu';
 
 export default function App() {
     return (
