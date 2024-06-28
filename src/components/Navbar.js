@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment} from "react";
 import { Pacifico } from "next/font/google";
 import { signOut, useSession } from "next-auth/react";
 
@@ -15,7 +15,7 @@ export default function NavBar() {
     <Fragment>
       <div className="bg-gray-600 bg-opacity-10 shadow-2xl sticky top-0 w-full p-4">
         <header className="flex items-center justify-between">
-          <div class="flex gap-8 md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <div className="flex gap-8 md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             {status === "authenticated" ? (
               <div className="flex gap-5 justify-between">
                 <button
