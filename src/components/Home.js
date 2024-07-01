@@ -26,7 +26,7 @@ export default function () {
                             Story...
                         </span>
                     </h1>
-                    <p className="my-4  indent-16 text-justify">
+                    <p className="my-4  indent-16 text-justify font-semibold">
                         As a devoted foodie, there's nothing more exhilarating
                         than the prospect of discovering new culinary delights.
                         Every dish tells a story, from the vibrant street food
@@ -41,7 +41,7 @@ export default function () {
                         opportunity to explore and celebrate the rich tapestry
                         of global gastronomy.
                     </p>
-                    <p className="my-4 indent-16 text-justify">
+                    <p className="my-4 indent-16 text-justify text-white">
                         As a devoted foodie, there's nothing more exhilarating
                         than the prospect of discovering new culinary delights.
                         Every dish tells a story, from the vibrant street food
