@@ -1,12 +1,11 @@
 "use client";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Pacifico } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
-import { redirect } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 const inter = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
@@ -14,7 +13,9 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
+  const [login, setLogin] = useState(false);
+  const session = useSession();
+  console.log(session.status);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -31,13 +32,41 @@ export default function Register() {
     });
 
     if (response.ok) {
-      toast.success("User Created");
+      toast.success("User Created, please login");
       console.log("User created");
+
+      {
+        /*  +++++++++++++++++++++++++++++++++++++++++ 
+        Trial code check if we can use Signin and register at the same time
+        ++++++++++++++++++++++++++++++++++++++++++++++  */
+      }
+      try {
+        const result = await signIn("credentials", {
+          email,
+          password,
+          callbackUrl: "/", // Set a specific path for the callback
+        });
+        if (result.error) {
+          throw new Error(result.error);
+        }
+        setLogin(true);
+      } catch (error) {
+        toast.error("Error in login");
+        setLogin(false);
+        console.log("Error", error);
+      }
+
+
+      {
+        /*  +++++++++++++++++++++++++++++++++++++++++ 
+        It works but shows error and success at the same time
+        ++++++++++++++++++++++++++++++++++++++++++++++  */
+      } 
+
     } else {
-      toast.error("Error while creating the user");
-      console.error()
+      toast.error("Error while creating the user, please try again");
+      console.error();
     }
-    
   }
 
   return (
