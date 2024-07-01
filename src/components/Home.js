@@ -1,6 +1,6 @@
 'use client';
 import { Fragment } from 'react';
-import Right from '../icons/Right';
+import { ArrowRightIcon } from '@heroicons/react/outline';
 import { Pacifico } from 'next/font/google';
 
 const inter = Pacifico({ weight: ['400'], subsets: ['latin'] });
@@ -58,18 +58,19 @@ export default function () {
                     </p>
                     <div className="flex gap-4 mt-10 text-sm">
                         <button
-                            className="text-white hover:shadow-black/25 hover:shadow-md transition-all bg-primary uppercase flex items-center rounded-full gap-2 py-2 px-4"
+                            className="text-white hover:shadow-black/25 hover:shadow-md transition-all bg-primary uppercase flex items-center rounded-full gap-1 py-2 px-4"
                             onClick={(e) => handleOrderNow()}
                         >
-                            Order now
-                            <Right />
+                        Order now
+                        <ArrowRightIcon className='h-4 w-4'/>
+                          
                         </button>
                         <button
-                            className="rounded-full hover:shadow-md transition-all flex justify-center gap-2 py-2 px-4 items-center font-semibold"
+                            className="rounded-full hover:shadow-md transition-all flex justify-center gap-1 py-2 px-4 items-center font-semibold"
                             onClick={handleLearnMore}
                         >
                             Learn more
-                            <Right />
+                            <ArrowRightIcon className='h-4 w-4'/>
                         </button>
                     </div>
                 </div>
