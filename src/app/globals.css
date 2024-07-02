@@ -33,7 +33,18 @@ body {
 }
 
 .blackPaper {
-    background: rgba(4, 4, 4, 0.3);
+    background: rgba(4, 4, 4, 0.2);
+    padding: 20px 20px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.whitePaper {
+    background: rgba(255, 253, 253, 0.3);
     padding: 20px 20px;
     border-radius: 10px;
     margin: auto;
@@ -61,8 +72,3 @@ input[type='text'] :disabled,
 input[type='tel']:disabled {
     @apply bg-gray-300 text-gray-500 border-0 cursor-not-allowed;
 }
-
-.custom-size {
-    width: 24px;
-    height: 24px;
-  }

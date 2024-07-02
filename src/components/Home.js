@@ -15,7 +15,7 @@ export default function () {
     }
     return (
         <Fragment>
-            <section className="hero whitePaper mb-8 mt-4 blackPaper">
+            <section className="hero mb-8 mt-4 blackPaper">
                 <div className="py-12 ">
                     <h1
                         className="text-4xl shadow"
@@ -26,7 +26,7 @@ export default function () {
                             Story...
                         </span>
                     </h1>
-                    <p className="my-4  indent-16 text-justify font-semibold">
+                    <p className="my-4 indent-20 text-xl text-justify" style={{ fontFamily: inter.style.fontFamily }}>
                         As a devoted foodie, there's nothing more exhilarating
                         than the prospect of discovering new culinary delights.
                         Every dish tells a story, from the vibrant street food
@@ -41,7 +41,7 @@ export default function () {
                         opportunity to explore and celebrate the rich tapestry
                         of global gastronomy.
                     </p>
-                    <p className="my-4 indent-16 text-justify text-white">
+                    <p className="my-4 indent-20 text-xl text-justify" style={{ fontFamily: inter.style.fontFamily }}>
                         As a devoted foodie, there's nothing more exhilarating
                         than the prospect of discovering new culinary delights.
                         Every dish tells a story, from the vibrant street food
