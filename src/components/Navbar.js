@@ -8,10 +8,12 @@ import {
   SearchIcon,
   GiftIcon,
   QuestionMarkCircleIcon,
-  ShoppingBagIcon,
   LoginIcon,
   LogoutIcon
 } from "@heroicons/react/outline";
+
+
+import ShoppingCartWithNumber from './ShoppingBagWithNumber'
 
 const inter = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
@@ -68,14 +70,15 @@ export default function NavBar() {
               <div className="flex gap-5 justify-between">
                 <Link
                   className="hover:text-primary flex items-center gap-2 font-semibold"
-                  href={"/checkout"}
+                  href={"/cart"}
                 >
-                  <ShoppingBagIcon className="h-6 w-6" />
+                  <ShoppingCartWithNumber number={5}/>
+                 
                   <span className="hidden md:block lg:block">Cart</span>
                 </Link>
                 <button
                   onClick={() => signOut()}
-                  className="flex items-center gap-2 py-2 px-8 rounded-full text-white hover:font-semibold hover:shadow-black/25 hover:shadow-md transition-all"
+                  className="flex items-center gap-2 py-2 px-8 rounded-full font-semibold hover:font-semibold hover:shadow-black/25 hover:shadow-md transition-all"
                 >
                 <LogoutIcon className="h-6 w-6" />
                 <span className="hidden md:block lg:block">Logout</span>

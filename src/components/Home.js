@@ -2,17 +2,21 @@
 import { Fragment } from 'react';
 import { ArrowRightIcon } from '@heroicons/react/outline';
 import { Pacifico } from 'next/font/google';
+import { useRouter } from 'next/navigation';
 
 const inter = Pacifico({ weight: ['400'], subsets: ['latin'] });
 
 
 export default function () {
+    const router= useRouter()
+
     function handleLearnMore() {
-        console.log('Please implement the "Learn more" functionality');
+       router.push('/')
     }
     function handleOrderNow() {
-        console.log('Please implement the "Oredr Now" functionality');
+      router.push('/search')
     }
+
     return (
         <Fragment>
             <section className="hero mb-8 mt-4 blackPaper">

@@ -3,72 +3,73 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 @layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
 body {
-    background: linear-gradient(rgba(222, 221, 221, 0.5), rgba(255, 0, 0, 0.5)),
-        url('/pxfuel.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-clip: border-box;
-    background-origin: padding-box;
+  background: linear-gradient(rgba(222, 221, 221, 0.5), rgba(255, 0, 0, 0.5)),
+    url("/pxfuel.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-origin: padding-box;
 }
 
 .blackPaper {
-    background: rgba(4, 4, 4, 0.2);
-    padding: 20px 20px;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 15px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+  background: rgba(4, 4, 4, 0.2);
+  padding: 20px 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .whitePaper {
-    background: rgba(255, 253, 253, 0.3);
-    padding: 20px 20px;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 15px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+  background: rgba(255, 253, 253, 0.3);
+  padding: 20px 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .loginPaper {
-    background: rgba(0, 0, 0, 0.3);
-    @apply w-fit m-auto p-5 mt-5 rounded-md;
+  background: rgba(0, 0, 0, 0.3);
+  @apply w-fit m-auto p-5 mt-5 rounded-md;
 }
 
-input[type='email'],
-input[type='password'],
-input[type='text'],
-input[type='tel'] {
-    @apply block mb-2 rounded-xl;
-    @apply block border p-2 border-gray-300 bg-gray-100;
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
+  @apply block mb-2 rounded-xl;
+  @apply block border p-2 border-gray-300 bg-gray-100;
 }
-input[type='email']:disabled,
-input[type='password']:disabled,
-input[type='text'] :disabled,
-input[type='tel']:disabled {
-    @apply bg-gray-300 text-gray-500 border-0 cursor-not-allowed;
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="text"] :disabled,
+input[type="tel"]:disabled {
+  @apply bg-gray-300 text-gray-500 border-0 cursor-not-allowed;
 }
+
