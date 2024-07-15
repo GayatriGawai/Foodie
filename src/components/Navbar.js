@@ -26,7 +26,6 @@ export default function NavBar() {
     <Fragment>
       <div className="bg-gray-600 bg-opacity-10 shadow-2xl sticky top-0 w-full p-5">
         <header className="flex items-center justify-between">
-         
           <nav className="flex items-center gap-10 font-semibold">
             <Link
               className="text-primary font-bold text-4xl"

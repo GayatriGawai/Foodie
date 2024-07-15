@@ -1,4 +1,3 @@
-
 import { Schema, model, models } from 'mongoose';
 
 const UserSchema = new Schema(
@@ -8,6 +7,8 @@ const UserSchema = new Schema(
             type: String,
             required: true,
             unique: true,
+            ref: "EndUser",
+            
         },
         password: {
             type: String,

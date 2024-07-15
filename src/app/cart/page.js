@@ -5,6 +5,7 @@ import React from "react";
 import { Fragment } from "react";
 import { Pacifico } from "next/font/google";
 
+
 const inter = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
 export default function page() {
